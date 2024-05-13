@@ -247,6 +247,10 @@ input[type="checkbox"] {
   }
 }
 
+#autor a {
+  color: #fff;
+}
+
 footer {
   text-align: center;
   padding: 24px;
