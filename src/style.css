@@ -74,6 +74,14 @@ section {
   background: #000;
 }
 
+.call-action {
+  background: #505050;
+}
+
+.call-action .botoes {
+  margin: 20px 0;
+}
+
 iframe {
   aspect-ratio: 16 / 9;
   height: 100%;
@@ -98,14 +106,45 @@ iframe {
   color: #000;
 }
 
-.aulas {
+.aulas,
+.botoes {
   display: flex;
   column-gap: 1em;
   margin-bottom: 1em;
 }
 
-.aulas li {
+.aulas li,
+.botoes li {
   width: 50%;
+}
+
+.botoes {
+  text-align: center;
+}
+
+.botoes li a {
+  padding: 20px 0;
+  background: #000;
+  border: solid 2px #000;
+  display: inline-block;
+  min-width: 100%;
+  border-radius: 24px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+}
+
+.botoes li a.outline {
+  background: none;
+  border: solid 2px #333;
+  color: #fff;
+}
+
+.botoes li a:hover,
+.botoes li a.outline:hover {
+  background: #00ff00;
+  border: solid 2px #00ff00;
+  color: #000;
 }
 
 .flex {
@@ -197,11 +236,13 @@ input[type="checkbox"] {
 
 /**/
 @media only screen and (max-width: 600px) {
-  .aulas {
+  .aulas,
+  .botoes {
     row-gap: 1em;
     flex-direction: column;
   }
-  .aulas li {
+  .aulas li,
+  .botoes li {
     width: 100%;
   }
 }
