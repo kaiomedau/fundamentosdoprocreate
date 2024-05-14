@@ -79,7 +79,7 @@ section {
 }
 
 .call-action .botoes {
-  margin: 20px 0;
+  margin: 4px 0;
 }
 
 iframe {
@@ -123,7 +123,7 @@ iframe {
 }
 
 .botoes li a {
-  padding: 20px 0;
+  padding: 16px 0;
   background: #000;
   border: solid 2px #000;
   display: inline-block;
@@ -232,6 +232,23 @@ input[type="checkbox"] {
 .toggle:checked + .lbl-toggle {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
+}
+
+.quote {
+  border-left: solid 4px #00ff00;
+  padding: 18px;
+}
+
+.quote p.sizeM {
+  margin: 0 0 12px;
+}
+
+.quote small {
+  color: #ccc;
+}
+
+.sizeM {
+  font-size: 22px;
 }
 
 /**/
