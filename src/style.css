@@ -12,7 +12,7 @@ h2,
 #curriculo li::marker {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   text-transform: uppercase;
-  color: #00ff00;
+  color: #b3fe05;
 }
 
 ul,
@@ -92,12 +92,12 @@ iframe {
   background-color: #000;
 }
 #inscricao h2 {
-  color: lime;
+  color: #b3fe05;
 }
 
 .btn-avisar div {
   text-decoration: none;
-  background-color: lime;
+  background-color: #b3fe05;
   /* margin: auto; */
   display: block;
   padding: 16px 40px;
@@ -143,7 +143,7 @@ iframe {
 .botoes li a:hover,
 .botoes li a.outline:hover {
   background: #00ff00;
-  border: solid 2px #00ff00;
+  border: solid 2px #b3fe05;
   color: #000;
 }
 
@@ -235,7 +235,7 @@ input[type="checkbox"] {
 }
 
 .quote {
-  border-left: solid 4px #00ff00;
+  border-left: solid 4px #b3fe05;
   padding: 18px;
 }
 
