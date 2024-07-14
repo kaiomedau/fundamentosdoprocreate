@@ -354,15 +354,19 @@
       <section id="introducao">
         <div class="wrap">
           <div class="video-thumbnail" data-video-id="aYfL8IefH2Y?si">
-            <img
-              src="./src/introducao-fundamentos-do-procreate-372w.webp"
-              srcset="
-                ./src/introducao-fundamentos-do-procreate-1024w.webp 1024w
-              "
-              sizes="(min-width: 1024px) 1024px, (min-width: 375px) 375px"
-              heights="(min-width: 1024px) 576px, (min-width: 375px) 209px"
-              alt="Introdução ao Curso Fundamentos do Procreate"
-            />
+            <picture>
+              <source
+                media="(min-width: 376px)"
+                width="1024"
+                srcset="./src/introducao-fundamentos-do-procreate-1024w.webp"
+              />
+              <img
+                src="./src/introducao-fundamentos-do-procreate-372w.webp"
+                width="375"
+                height="209"
+                alt="Introdução ao Curso Fundamentos do Procreate"
+              />
+            </picture>
           </div>
 
           <div class="quote">
