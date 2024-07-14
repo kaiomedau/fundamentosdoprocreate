@@ -269,6 +269,19 @@
         font-size: 22px;
       }
 
+      .video-thumbnail {
+        display: inline-block;
+        /* margin: 10px; */
+        cursor: pointer;
+      }
+      .video-thumbnail img {
+        width: 100%;
+      }
+
+      #introducao .video-thumbnail {
+        display: block;
+      }
+
       /**/
       @media only screen and (max-width: 600px) {
         .aulas,
@@ -315,14 +328,13 @@
     <main>
       <section id="introducao">
         <div class="wrap">
-          <iframe
-            src="https://www.youtube.com/embed/aYfL8IefH2Y?si=5nMcJ4klOfQl47W1"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-            loading="lazy"
-          ></iframe>
+          <li class="video-thumbnail" data-video-id="aYfL8IefH2Y?si">
+            <img
+              src="./src/introducao-fundamentos-do-procreate.webp"
+              alt="Introdução ao Curso Fundamentos do Procreate"
+              loading="lazy"
+            />
+          </li>
 
           <div class="quote">
             <p class="sizeM">
@@ -647,47 +659,35 @@
         <div class="wrap">
           <h2>Aulas gratuitas para degustação</h2>
           <ul class="aulas">
-            <li>
-              <iframe
-                src="https://www.youtube.com/embed/Ygul87Bpiwc?si=H45WQxjBA4K87YWu"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
+            <li class="video-thumbnail" data-video-id="Ygul87Bpiwc">
+              <img
+                src="./src/aula-01-conhecendo-a-galeria-do-procreate.webp"
+                alt="Aula 01 - Conheça a Galeria do Procreate"
                 loading="lazy"
-              ></iframe>
+              />
             </li>
-            <li>
-              <iframe
-                src="https://www.youtube.com/embed/2QfG1avpdEs?si=Gd701051DlZCaPXN"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
+            <li class="video-thumbnail" data-video-id="2QfG1avpdEs">
+              <img
+                src="./src/aula-pratica-criando-um-pincel-de-carimbo-procreate.webp"
+                alt="Aula Prática - Criando um Pincel de Carimbo"
                 loading="lazy"
-              ></iframe>
+              />
             </li>
           </ul>
           <ul class="aulas">
-            <li>
-              <iframe
-                src="https://www.youtube.com/embed/PIPB4zG7Yn8?si=eEI8Ded8qjT8aSyz"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
+            <li class="video-thumbnail" data-video-id="PIPB4zG7Yn8">
+              <img
+                src="./src/aula-08-camadas-no-procreate.webp"
+                alt="Aula 08 - Camadas no Procreate"
                 loading="lazy"
-              ></iframe>
+              />
             </li>
-            <li>
-              <iframe
-                src="https://www.youtube.com/embed/mwxzW6oZS90?si=OTFGEtuwNPbTKBEN"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
+            <li class="video-thumbnail" data-video-id="mwxzW6oZS90">
+              <img
+                src="./src/aula-25-efeito-de-ruido-no-procreate.webp"
+                alt="Aula 25 - Efeito de Ruído"
                 loading="lazy"
-              ></iframe>
+              />
             </li>
           </ul>
         </div>
@@ -792,4 +792,28 @@
       <small>Curso de Procreate em português.</small>
     </footer>
   </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var videoThumbnails = document.querySelectorAll(".video-thumbnail");
+
+      videoThumbnails.forEach(function (thumbnail) {
+        thumbnail.addEventListener("click", function () {
+          var videoId = this.getAttribute("data-video-id");
+          var iframe = document.createElement("iframe");
+          iframe.setAttribute(
+            "src",
+            "https://www.youtube.com/embed/" + videoId
+          );
+          iframe.setAttribute("width", "560");
+          iframe.setAttribute("height", "315");
+          iframe.setAttribute("frameborder", "0");
+          iframe.setAttribute("allowfullscreen", "true");
+
+          // Substitui a imagem pela iframe
+          this.innerHTML = "";
+          this.appendChild(iframe);
+        });
+      });
+    });
+  </script>
 </html>
